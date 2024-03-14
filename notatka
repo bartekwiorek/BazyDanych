@@ -19,3 +19,11 @@ TEXT	Kolumna binarna lub tekstowa o rozmiarze nie przekraczającym 65 535 bajtó
 TINYTEXT	Kolumna binarna lub tekstowa o rozmiarze nie przekraczającym 255 bajtów
 
 INSERT INTO klient(id_klient, imie, nazwisko, miejscowosc, nr_telefonu) VALUES ('',"Jan","Marcinskowski","Kalisz","1234567");
+
+Jezyk SQL (Structured Query Language) jest uniwersalnym językiem zapytań stosowanym w systemach relacyjnych baz danych w celu komunikowania się z bazą. Służy do manipulowania danymi umieszczonymi w relacyjnych bazach danych. Dzieki niemu praca na roznych systemach baz danych sprowadza sie do wydawania tych samych lub podobnych komend tak zwanych zapytań SQL.
+Język w SQL zaimplementowano w większości relacyjnych systmów baz danych takich jak DB2, Oracle, InterBase, MySQL, dBase i Paradox. Składnie jezyka SQL mozemy podzielic na 4 czesci:
+  -Język Definiowania Struktur Danych (DDL Data Definition) jest wykorzystywany do wszystkich operacji na tabelach takich jak tworzenie, modyfiacja i usuwanie.
+  -Jezyk do wybierania i maniupulowania danymi (DML Data Manipulation Language) sluzy do manpulowania danymi umieszczonymi w tabelach, pozwala na wstawienie oraz na prezentacje modyfikowania oraz usuwania.
+  -Jezyk do zapewnienia bezpieczenstwa dostepu do danych (DCL Data Control Language) jest uzywany glownie przez administratorów systemow baz banych do nadawania odpowiednich uprawnien do korzystania z bazy danych.
+  -Jezyk definowania zapytan (DQL Data Query Language) używany jest do formulowania zapytań do baz danych. Do zakresu tego jezyka wchodzi polecenie SELECT
+Instrukcje SQL skladaja sie z wyrazen oraz klauzuli. wyrazenie jest poleceniem (instrukcja), ktore ustala co nalezy zrobic. Klauzula sluzy do ustalenia ograniczen dla danego polecenia i jest zapisywana w formie warunków.
