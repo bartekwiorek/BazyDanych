@@ -17,3 +17,5 @@ MEDIUMTEXT	Kolumna binarna lub tekstowa o rozmiarze nie przekraczającym 16 777 
 LONGTEXT	Kolumna binarna lub tekstowa o rozmiarze nie przekraczającym 4 294 967 295 bajtów
 TEXT	Kolumna binarna lub tekstowa o rozmiarze nie przekraczającym 65 535 bajtów\
 TINYTEXT	Kolumna binarna lub tekstowa o rozmiarze nie przekraczającym 255 bajtów
+
+INSERT INTO klient(id_klient, imie, nazwisko, miejscowosc, nr_telefonu) VALUES ('',"Jan","Marcinskowski","Kalisz","1234567");
