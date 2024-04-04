@@ -35,3 +35,59 @@ operatory dziela sie na:
 -logiczne: operator "end", alternatywa opertor "or", negacja "not"
 -rownania: mniejszy, wiekszy, mniejszy rowny, wiekszy rowny, rowny
 -operatory specjalne: between...end, like, in,
+
+
+04/04/2024
+Temat jezyk definiowania struktur danych - DDL
+
+Jezyk DDL slozy do tworzenia modyfikacji i usuwania bazy danych oraz jej tabel
+
+Funkcja DDL polecenia:
+-create nazwa obiektu - tworzenie obiektu (bazy lub tabeli)
+-alter nazwa obiektu - modyfikacja obiektu
+-drop nazwa obiektu - usuwanie obiektu 
+
+Usuniecie bazy danych jest mozliwe tylko wtedy jesli dysponuje sie odpowiednimi uprawnieniami do bazy i nikt nie jest z nia polaczony w danym momencie (wazne!)  Podczas tworzenia tabel nalezy pameitac o nastepujacych zasadach:
+
+-kazda tabela powinna miec unikatowa nazwe
+-kazda kolumna w tabeli powinna miec unikatowa nazwe
+-kazda kolumna musi miec unikatowa nazwe
+-nalezy pamietac ze utworzone tabele nie sa wsypelnione danymi (oczywiste)
+
+Modyfikowanie tabel 
+
+podczas modyfikowania utworzonej tabeli nalezy zastosowac instrukcje ALTER umozliwia ona miedzy innymi dodawanie nowej kolumny, skasowanie juz utowrzonej kolumny, przeniesienie kolumny, badz dodanie lub usuniecie danego ograniczenia
+
+Atrybuty pol w tabelach
+
+w tabelach tworzonych w bazach danych mozna narzucic pewne ograniczenia okreslajace dokladnie strukture danych jakie moga zostac zapisane w danej kolumnie ograniczenia dotyczace kolumn moga byc definiowane w trakcie robienia tabeli lub jej modyfikowanie 
+
+atrybut not null oznacza ze w danej kolumnie nie moga sie znajdowac wartosci puste aby zabronic wstawiania pusty wartosci null podczas tworzenia tabeli nalezy po nazwie kolumny wpisac not null
+
+mozna rowniez jawnie zezwolic na wprowadzenie do kolumny wartosci null przez wpisanie w swojej po jej nazwie slowa null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
