@@ -27,3 +27,11 @@ Język w SQL zaimplementowano w większości relacyjnych systmów baz danych tak
   -Jezyk do zapewnienia bezpieczenstwa dostepu do danych (DCL Data Control Language) jest uzywany glownie przez administratorów systemow baz banych do nadawania odpowiednich uprawnien do korzystania z bazy danych.
   -Jezyk definowania zapytan (DQL Data Query Language) używany jest do formulowania zapytań do baz danych. Do zakresu tego jezyka wchodzi polecenie SELECT
 Instrukcje SQL skladaja sie z wyrazen oraz klauzuli. wyrazenie jest poleceniem (instrukcja), ktore ustala co nalezy zrobic. Klauzula sluzy do ustalenia ograniczen dla danego polecenia i jest zapisywana w formie warunków.
+\
+
+operatory dziela sie na:
+-arytmetyczne: suma, roznica, iloczyn, iloraz, modulo
+-znakowe: konkatenacja, procent, symbolujacy jeden znak ("_")
+-logiczne: operator "end", alternatywa opertor "or", negacja "not"
+-rownania: mniejszy, wiekszy, mniejszy rowny, wiekszy rowny, rowny
+-operatory specjalne: between...end, like, in,
