@@ -69,19 +69,9 @@ mozna rowniez jawnie zezwolic na wprowadzenie do kolumny wartosci null przez wpi
 Do wyświetlania danych z tabeli sluzy polecenie select
 Select field_name1 from tabela [where condtition] [group by field name] [having condition] [order by field name] [offset m][limit n]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+klucz podstawowy primary key to kolumna ktore w sposob jednoznaczny definuja wiersz w tabeli, kolumna z tym atrybutem jest unikatowa i automatycznie indeksowana. klucz podstawowy w tabelach odgrywa bardzo wazna role poniewaz sluzy do jednoznacznego identyfikowania rekordow danej tabeli. jak latwo zauwazyc dane w tych kolumnach nie moga sie pwotarzac. aby w utworzonej wczesniej tabeli ustawic klucz podstawowy nalezy uzyc polecenia:
+  alter table table add constraint primary key nazwa_kolumny
+podczas wstawiania nowych danych do tabeli, odbrze jest nie podawac wartosci do klucza poniewaz uzytkjownik bazy moze nie wiedziec, jakie id ma ostatni dodany rekord
 
 
 
