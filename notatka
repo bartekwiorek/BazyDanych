@@ -73,6 +73,13 @@ klucz podstawowy primary key to kolumna ktore w sposob jednoznaczny definuja wie
   alter table table add constraint primary key nazwa_kolumny
 podczas wstawiania nowych danych do tabeli, odbrze jest nie podawac wartosci do klucza poniewaz uzytkjownik bazy moze nie wiedziec, jakie id ma ostatni dodany rekord. najlepiej aby wartosci tej kolumny byly automatycznie uzupelniane poprzez autoinkrementacje, ktora uzyskuje sie przy pomocy auto_increment. dodanie tej wartosci dla kolumny jest mozliwe, tylko podczas jej tworzenia, nie ma mozliwosci aktualizowania utworzonej kolumny
 
+aby uzywac dane ktore nie sa automatycznie generowane przez serwer bazy danych jako klucza podtawowego trzbea zagwarantować klucza glownego czyli unikatowość tsk aby mozna bylo jednoznacznie zidentyfikować rekord w tabelii. w bazach mysql wykojuje za pomoca slowa unique.
+
+jezyk do manipulowania danymi DML jezyk manipulowania sluzy do pobierania i modyfikowania danych. so instrukcji dml nalezy nastepujące polecenie:
+ insert wstawienie nowych wierszy w tabele
+ update zmiana zawartosci danego wiersza
+ jesli podczas definowania tabeli dla okreslonej kolumnjy zostalo ustalone NULL to proba zapisania nowego wiersza bez zapisanua wartosci danej kolumny zakonczy sie niepowodzeniem
+w przypadku nie powodzenia update po slowie kluczowym update nalezy podac tabele w ktorej beda podawane zmiany natomiast po klauzuli set podaje sie nazwe kolumny i jej nowa wartość wykonanie tej instrukcji wykona zmiane we wszystkich wierszasz tej kolumny 
 
 
 
