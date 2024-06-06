@@ -1,0 +1,70 @@
+CREATE DATABASE nazwa; - tworzy baze
+DROP DATABASE nazwa; - usuwa baze
+CREATE TABLE osoba (
+ID_osoby int,
+Imie varchar(255),
+Nazwisko varchar(255),
+Adres varchar(255),
+Miasto varchar(255)
+);
+DROP TABLE nazwa; - usuwa tabele
+INSERT INTO tabela (column1, column2, column3, …) VALUES (value1, value2, value3, …); - dodanie info
+
+INSERT INTO tabela VALUES (value1, value2, value3…); - dodanie info 2
+
+ALTER TABLE tabelaADD nazwa_kolumny typ_danych – dodanie kolumny
+ALTER TABLE tabela CHANGE stara_kolumna nowa_kolumna typ_danych – zmiana nazwy kolumny
+ALTER TABLE tabela MODIFY COLUMN nazwa_kolumny typ_danych – zmana typu danych
+ALTER TABLE tabela DROP COLUMN nazwa_kolumny – usuwanie kolumny
+ALTER TABLE tabela ALTER COLUMN nazwa_kolumny SET DEFAULT wartość_domyślna –wartość domyśln
+ALTER TABLE tabela MODIFY nazwa_kolumny typ_danych NOT NULL –ograniczenie not null
+ALTER TABLE tabela MODIFY COLUMN nazwa_kolumny typ_danych NULL – usuwanie not null
+ALTER TABLE tabela ADD COLUMN nowa_kolumna typ_danych NOT NULLAFTER kolumna_za_którą_dac – kolumna
+za kolumne
+ALTER TABLE tabela MODIFY COLUMN nazwa_kolumny typ_danych AFTER inna_kolumna – przenoszenie kolumny
+za kolumnę
+ALTER TABLE tabela MODIFY COLUMN nazwa_kolumny typ_danych – zmiana typu danych w kolumnie
+RENAME TABLE stara_nazwa TO nowa_nazwa; - zmiana nazwy tabeli
+SELECT * FROM ksiazka; - wyświetla książki
+SELECT tytul, cena FROM ksiazka; - wyświetla tytuł i cenę książki
+SELECT * FROM klient WHERE miejscowosc=’Warszawa’; - klienci tylko z Warszawy
+SELECT * FROM klient WHERE miejscowosc=’Warszawa’ OR miejscowosc=’Kalisz’; - klienci tylko z Warszawy i Kalisza
+SELECT * FROM klient WHERE miejscowosc=’Warszawa’ and imie=’Jan’; - klienci tylko z Warszawy o imieniu Jan
+SELECT * FROM klient WHERE miejscowosc=’Warszawa’ and telefon LIKE’123%’; - klienci tylko z Warszawy i numerze
+od 123
+SELECT * FROM ksiazka WHERE cena < 50; - książki poniżej 50zł
+SELECT * FROM ksiazka WHERE tytul LIKE ‘A%’; - książki na literę A
+SELECT * FROM klient WHERE telefon LIKE ‘%5%’; - numery zawierające 5
+SELECT * FROM klient WHERE miejscowosc NOT IN (‘Warszawa’, ‘Kraków’); - klienci nie mieszkający w Warszawie i
+Krakowie
+SELECT * FROM ksiazka WHERE cena BETWEEN 20 AND 50; - książki pomiędzy 20 a 50zł
+SELECT * FROM klient WHERE imie LIKE ‘M%’ OR imie LIKE ‘K%’; - osoby z imionami na K i M
+SELECT * FROM klient ORDER BY nazwisko; - sortowanie alfabetyczne nazwiskiem
+SELECT * FROM ksiazka ORDER BY cena DESC; - sortowanie malejąco według ceny
+SELECT * FROM klient ORDER BY miejscowosc, nazwisko; - sortowanie według zamieszkania i alfabetycznie
+nazwiska
+SELECT * FROM klient LIMIT 10; - 10 pierwszych klientów
+SELECT * FROM ksiazka WHERE cena > 20 LIMIT 3; - 3 pierwsze książki powyżej 20zł
+SELECT * FROM klient LIMIT 3 OFFSET 3; - od 3 do 6 klientów
+SELECT * FROM klient LIMIT 5 OFFSET 2; - 5 klientów zaczynając od 3
+SELECT * FROM ksiazka ORDER BY cena LIMIT 5; - 5 najtańszych książek
+SELECT imie AS imie_klienta, nazwisko AS nazwisko_klienta FROM klient; - imiona i nazwiska jako imie klienta,
+nazwisko klienta
+SELECT CONCAT(imie,’’,nazwisko) AS pelne_imie FROM klient; - imie i nazwisko jako 1 pole
+SELECT CONCAT(tytul, ' - ', imie_autora, ' ', nazwisko_autora) AS tytul_i_autor FROM ksiazka; - tytuł, imie i nazwisko
+razem
+SELECT MIN(cena) AS min_cena FROM ksiazka; - minimalna cena
+SELECT MAX(cena) AS max_cena FROM ksiazka; - maksymalna cena
+SELECT MIN(data_zamowienia) AS min_data_zamowienia FROM zamowienie; - najstarsze zamówienie
+SELECT COUNT(*) AS liczba_klientow FROM klient; - liczba wszystkich klientów
+SELECT COUNT(*) AS liczba_zamowien FROM zamowienie WHERE id_klienta = 4; - liczba zamówień klienta o id 4
+SELECT COUNT(*) AS liczba_ksiazek FROM ksiazka WHERE imie_autora = 'Łukasz' AND nazwisko_autora ='Wierzbicki';
+- liczba książek Łukasza Wierzbickiego
+SELECT COUNT(*) AS liczba_zamowien FROM zamowienie WHERE YEAR(data_zamowienia) = 2023; - zamówienia w
+2023
+SELECT COUNT(*) AS liczba_zamowien FROM zamowienie WHERE MONTH(data_zamowienia) = 9 AND
+YEAR(data_zamowienia) = 2023; - zamówienia we wrześniu 2023
+SELECT COUNT(*) AS liczba_ksiazek FROM ksiazka WHERE cena > 45; - książki powyżej 45zł
+SELECT AVG(cena) AS srednia_cena FROM ksiazka; - średnia cena
+SELECT AVG(LENGTH(nazwisko_klienta)) AS srednia_dlugosc_nazwiska FROM klient; - średnia długość nazwisk
+SELECT SUM(cena) AS suma_cen FROM ksiazka; - suma cen
