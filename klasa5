@@ -1,1 +1,2 @@
+select * from ksiazka where cena > (select AVG(cena) from ksiazka);           -- dwa selekty
 
