@@ -1,2 +1,10 @@
 select * from ksiazka where cena > (select AVG(cena) from ksiazka);           -- dwa selekty
 
+
+
+                                                TEMAT: jezyk definowania zapytań
+Instrukcja SELECT pozwala na okreslenie tego jakie dane zostana wyswietlone z danej tabeli. podstawowa forma instrukcji jest nastepujaca:   select * form tabela, gdzie * wyswietla wszystkie kolumny danej tabelii
+Klauzura DISTI pozwala na wyswietlenmie nie powtarzajacych sie danych. 
+Polecnie SELECT pozwala na obliczanie wyrazen w instrukcjach: SELECT tytul, 0.8*cena as 'Cena Promocyjna' from ksiazka;
+Aby zaokraglisc wartosci w tabeli trzeba uzyc polecnie round();
+Aby polaczy kilka pol w bazie sql uzywamy polecenia CONCAT(); funkcja ta laczy lancuchy znakow CONCAT('imieautora','nazwiskoautora') as 'imie i nazwisko autora' from kmsaizka;
