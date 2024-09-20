@@ -1,5 +1,5 @@
 select * from ksiazka where cena > (select AVG(cena) from ksiazka);           -- dwa selekty
-
+select k.imie_klienta, k.nazwisko_klienta, b.tytul, z.data_zamowienia from zamowienie z INNER JOIN klient k ON z.id_klienta = k.id_klienta inner JOIN ksiazka b on z.id_ksiazki = b.id_ksiazki;          --inner join
 
 
                                                 TEMAT: jezyk definowania zapytań
