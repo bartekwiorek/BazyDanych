@@ -8,3 +8,14 @@ Klauzura DISTI pozwala na wyswietlenmie nie powtarzajacych sie danych.
 Polecnie SELECT pozwala na obliczanie wyrazen w instrukcjach: SELECT tytul, 0.8*cena as 'Cena Promocyjna' from ksiazka;
 Aby zaokraglisc wartosci w tabeli trzeba uzyc polecnie round();
 Aby polaczy kilka pol w bazie sql uzywamy polecenia CONCAT(); funkcja ta laczy lancuchy znakow CONCAT('imieautora','nazwiskoautora') as 'imie i nazwisko autora' from kmsaizka;
+
+  
+                                                łączenie tabel w mysql
+Połaczenia miedzy tabelami sa najwazniejszym mechanizmen relacyjnych baz danych. To dzieki nim mozemy wybierac pasujace do siebie dane z wielu tabel. 
+Połączenia w bazach danych sa realizowane miedzy kluczem podstawowymn w jednej tabeli i kluczem w drugiej tabeli. W jezyku mysql polaczenie miedzy tabelamijest definiowane w sekcji zapytania.
+Połaczenie miedzy tabelami definiuje slowo kluczowe inner join. Aby prawidlowo utworzyc zapytanie nalezy zdefiniowac polaczenia miedzy tabelami bazy danych.
+Połączen miezdy tabelami mozna uzywac wielokrotnie jednak wplywa to na szybkosc dzialania zapytania. Kolejnym rodzajem poolaczenia miedzy tabelami jest polaczenie zewnetrzne OUTER JOIN.
+Przy takim polaczeniu wynikiem zapytania sa wszystkie wiersze w jednej tabeli i pasujace do niej wiersze z drugiej tabeli. Polaczenia zewnetrze definiuje sie za pomoca polecen LEFT zwraca wszystkie 
+wiersze z pierwszej tabeli i pasujace wyniki z drugiej tabeli.
+Polecenie right zwraca polecenie z lewej tabeli i pasujace z prawej tabeli.
+Polecenie FULL zwraca wszystkie pasujace zapytania z tabel.
