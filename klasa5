@@ -2,6 +2,8 @@ select * from ksiazka where cena > (select AVG(cena) from ksiazka);           --
 select k.imie_klienta, k.nazwisko_klienta, b.tytul, z.data_zamowienia from zamowienie z INNER JOIN klient k ON z.id_klienta = k.id_klienta inner JOIN ksiazka b on z.id_ksiazki = b.id_ksiazki;          --inner join
 select k.imie_klienta, k.nazwisko_klienta, z.data_zamowienia from zamowienie z INNER JOIN klient k ON z.id_klienta = k.id_klienta inner JOIN ksiazka b ON z.id_ksiazki = b.id_ksiazki where z.data_zamowienia > '2023-09-08';     --po dacie
 select k.imie_klienta, k.nazwisko_klienta, b.tytul from zamowienie z INNER JOIN klient k ON z.id_klienta = k.id_klienta inner JOIN ksiazka b ON z.id_ksiazki = b.id_ksiazki where nazwisko_klienta="Kowalski";       --po nazwisku
+select imie_klienta, nazwisko_klienta, tytul, data_zamowienia from klient, ksiazka, zamowienie where klient.id_klienta = ksiazka.id_ksiazki = zamowienie.id_zamowienia;                 --drugi sposob
+
 
 
 
