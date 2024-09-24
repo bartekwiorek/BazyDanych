@@ -3,8 +3,9 @@ select k.imie_klienta, k.nazwisko_klienta, b.tytul, z.data_zamowienia from zamow
 select k.imie_klienta, k.nazwisko_klienta, z.data_zamowienia from zamowienie z INNER JOIN klient k ON z.id_klienta = k.id_klienta inner JOIN ksiazka b ON z.id_ksiazki = b.id_ksiazki where z.data_zamowienia > '2023-09-08';     --po dacie
 select k.imie_klienta, k.nazwisko_klienta, b.tytul from zamowienie z INNER JOIN klient k ON z.id_klienta = k.id_klienta inner JOIN ksiazka b ON z.id_ksiazki = b.id_ksiazki where nazwisko_klienta="Kowalski";                    --po nazwisku
 select imie_klienta, nazwisko_klienta, tytul, data_zamowienia from klient, ksiazka, zamowienie where zamowienie.id_klienta = klient.id_klienta and zamowienie.id_ksiazki = ksiazka.id_ksiazki and nazwisko_klienta = "kowalski";  --drugi sposob                             --drugi sposob
- select klient.imie_klienta, klient.nazwisko_klienta, round (SUM(ksiazka.cena),2) AS suma_zamowien from klient, ksiazka, zamowienie where zamowienie.id_klienta = klient.id_klienta and zamowienie.id_ksiazki = ksiazka.id_ksiazki GROUP by klient.id_klient       --guwno
+select klient.imie_klienta, klient.nazwisko_klienta, round (SUM(ksiazka.cena),2) AS suma_zamowien from klient, ksiazka, zamowienie where zamowienie.id_klienta = klient.id_klienta and zamowienie.id_ksiazki = ksiazka.id_ksiazki GROUP by klient.id_klient       --suma cen zamowienia
 
+select klient.imie_klienta, klient.nazwisko_klienta, count(ksiazka.cena) AS suma_zamowien from klient, ksiazka, zamowienie where zamowienie.id_klienta = klient.id_klienta and zamowienie.id_ksiazki = ksiazka.id_ksiazki GROUP by klient.id_klienta;        --policz ile zamowien
 
 
 
