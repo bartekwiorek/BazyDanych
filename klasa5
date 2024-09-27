@@ -5,7 +5,9 @@ select k.imie_klienta, k.nazwisko_klienta, b.tytul from zamowienie z INNER JOIN 
 select imie_klienta, nazwisko_klienta, tytul, data_zamowienia from klient, ksiazka, zamowienie where zamowienie.id_klienta = klient.id_klienta and zamowienie.id_ksiazki = ksiazka.id_ksiazki and nazwisko_klienta = "kowalski";  --drugi sposob                             --drugi sposob
 select klient.imie_klienta, klient.nazwisko_klienta, round (SUM(ksiazka.cena),2) AS suma_zamowien from klient, ksiazka, zamowienie where zamowienie.id_klienta = klient.id_klienta and zamowienie.id_ksiazki = ksiazka.id_ksiazki GROUP by klient.id_klient       --suma cen zamowienia
 select klient.imie_klienta, klient.nazwisko_klienta, count(ksiazka.cena) AS suma_zamowien from klient, ksiazka, zamowienie where zamowienie.id_klienta = klient.id_klienta and zamowienie.id_ksiazki = ksiazka.id_ksiazki GROUP by klient.id_klienta;        --policz ile zamowien
- select ksiazka.tytul, count(zamowienie.id_zamowienia) AS liczba_zamowien from ksiazka, zamowienie where zamowienie.id_ksiazki = ksiazka.id_ksiazki GROUP by ksiazka.id_ksiazki;                                                                              --wysietlamy liczbe zamowien dla kazdje ksaizki
+select ksiazka.tytul, count(zamowienie.id_zamowienia) AS liczba_zamowien from ksiazka, zamowienie where zamowienie.id_ksiazki = ksiazka.id_ksiazki GROUP by ksiazka.id_ksiazki;                                                                              --wysietlamy liczbe zamowien dla kazdje ksaizki
+select concat(klient.imie_klienta," ", klient.nazwisko_klienta) as autor, COUNT(ksiazka.cena) as liczba_ksiazek from klient, ksiazka, zamowienie where zamowienie.id_klienta = klient.id_klienta and zamowienie.id_ksiazki = ksiazka.id_ksiazki GROUP BY klient.id_klienta ORDER BY liczba_ksiazek DESC;   --wysietlamy liczbe zamowien dla id klienta
+
 
 
 
