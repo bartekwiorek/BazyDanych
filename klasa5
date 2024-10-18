@@ -56,3 +56,15 @@ Przy takim polaczeniu wynikiem zapytania sa wszystkie wiersze w jednej tabeli i 
 wiersze z pierwszej tabeli i pasujace wyniki z drugiej tabeli.
 Polecenie right zwraca polecenie z lewej tabeli i pasujace z prawej tabeli.
 Polecenie FULL zwraca wszystkie pasujace zapytania z tabel.
+
+
+Druga postac normalna
+
+Aby tabela byla w drugiej postaci normalnej musi ona spelniac dwie reguly
+-musi ona byc w pierwszej postaci normalnej
+-wszystkie jej atrybuty niekluczowe musza byc w pelni zalezne od kazdego z kluczy kandydujacych (jesli w tabeli wystepuja klucze zlozone to atrybuty niekluczowe musza byc zalezne od calych kluczy a nie tylko ich czesc)
+
+Trzecia postac normalna 3NF
+Aby tabela byla w trzeciej postaci normalnej 3NF musi ona spelniac nastepujace reguly
+-musi ona byc w drugiej postaci normalnej 2NF zatem musi ona spelniac takze reguly 1NF\
+-zaden atrybut niekluczowy nie moze zalezec przechodnio od zadnego z kluczy kandydujacych tj wszystkie atrybut wtorne zaleza bezposrednio od wszystkich kluczy kandydujacych
